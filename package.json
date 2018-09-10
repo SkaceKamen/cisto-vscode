@@ -4,7 +4,7 @@
   "description": "Support for cisto.js language",
   "version": "1.0.0",
   "publisher": "skacekachna",
-  "icon": "images/sqflint.png",
+  "icon": "images/logo.png",
   "licence": "MIT",
   "author": "Jan Zípek <jan@zipek.cz>",
   "engines": {
