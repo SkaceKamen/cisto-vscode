@@ -1,0 +1,43 @@
+{
+  "name": "cisto",
+  "displayName": "cisto.js",
+  "description": "Support for cisto.js language",
+  "version": "1.0.0",
+  "publisher": "skacekachna",
+  "icon": "images/sqflint.png",
+  "licence": "MIT",
+  "author": "Jan Zípek <jan@zipek.cz>",
+  "engines": {
+    "vscode": "^1.27.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SkaceKamen/cisto-vscode.git"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "cisto",
+        "aliases": [
+          "Cisto",
+          "cisto"
+        ],
+        "extensions": [
+          ".cst",
+          ".cisto"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cisto",
+        "scopeName": "source.cisto",
+        "path": "./syntaxes/cisto.tmLanguage.json"
+      }
+    ]
+  }
+}

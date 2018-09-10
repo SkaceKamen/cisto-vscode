@@ -1,0 +1,51 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Cisto",
+	"patterns": [
+		{
+			"name": "entity.name.type.cisto",
+			"match": "\\.[a-z$][\\w\\-_$$]*"
+		},
+		{
+			"name": "variable.other.constant.cisto",
+			"match": "\\#[a-z$][\\w\\-_$]*"
+		},
+		{
+			"match": "([a-z][\\w@_\\-$]*)\\s*(=)",
+			"captures": {
+				"1": {
+					"name": "entity.other.attribute-name.cisto"
+				},
+				"2": {
+					"name": "keyword.operator.assignment.cisto"
+				}
+			}
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "entity.name.tag.cisto",
+				"match": "\\b(a|abbr|acronym|address|applet|area|article|aside|audio|b|base|basefont|bdi|bdo|big|blockquote|body|br|button|canvas|caption|center|cite|code|col|colgroup|data|datalist|dd|del|details|dfn|dialog|dir|div|dl|dt|em|embed|fieldset|figcaption|figure|font|footer|form|frame|frameset|h1|head|header|hr|html|i|iframe|img|input|ins|kbd|label|legend|li|link|main|map|mark|meta|meter|nav|noframes|noscript|object|ol|optgroup|option|output|p|param|picture|pre|progress|q|rp|rt|ruby|s|samp|script|section|select|small|source|span|strike|strong|style|sub|summary|sup|svg|table|tbody|td|template|textarea|tfoot|th|thead|time|title|tr|track|tt|u|ul|var|video|wbr)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.cisto",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.cisto",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.cisto"
+}
